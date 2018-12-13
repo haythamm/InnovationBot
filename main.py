@@ -39,8 +39,6 @@ async def on_message(message):
             await client.send_message(message.channel, msg)  # Send the response.
             # Sends a random image from the list of images
             await client.send_file(message.channel, "images/" + images[random.randint(0, len(images) - 1)])
-        if "u of a" in message.content.lower():
-            await client.send_message(message.channel, "BOOOOOOO!")
 
 
 token = os.environ.get("DISCORD_BOT_SECRET")
